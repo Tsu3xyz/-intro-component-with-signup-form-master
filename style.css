@@ -1,0 +1,255 @@
+:root {
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: hsl(154, 59%, 51%);
+  --color-blue: hsl(248, 32%, 49%);
+  --color-dark-blue: hsl(249, 10%, 26%);
+  --color-gray-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-red);
+  background-image: url(./images/bg-intro-desktop.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 144rem;
+  height: 80rem;
+  padding: 12.1rem 16.5rem;
+  display: flex;
+}
+
+.container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  color: white;
+}
+
+.container__text .main--heading {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.container__text .main--paragraph {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.btn {
+  display: block;
+  border-radius: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 1.7rem 11.645rem;
+}
+
+.btn-blue {
+  background-color: var(--color-blue);
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  margin-bottom: 2.4rem;
+}
+
+.btn-green {
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border-radius: 5px;
+  background-color: var(--color-green);
+  border: none;
+  line-height: 2.6rem;
+  width: 600;
+  text-transform: uppercase;
+  padding: 1.5rem 11rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-green:hover,
+.btn-green:active {
+  background: #77e2b3;
+}
+
+.btn-green:active {
+  transform: scale(0.98);
+}
+
+.container__form .btn span {
+  font-weight: 300;
+}
+
+.container__form--wrapper {
+  background-color: white;
+  padding: 4rem;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 1rem;
+  max-width: 54rem;
+}
+
+.container__form--wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__form--wrapper form input {
+  border: 1px solid var(--color-gray-blue);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  width: 46rem;
+  height: 5.6rem;
+  padding-left: 3.2rem;
+  color: var(--color-dark-blue);
+  font-weight: 700;
+}
+
+.container__form--wrapper form input:active,
+.container__form--wrapper form > input:focus {
+  border: 1px solid var(--color-blue);
+}
+
+.container__form--wrapper form input::placeholder {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  color: var(--color-dark-blue);
+}
+
+.form-box {
+  position: relative;
+}
+
+.form-box label {
+  display: none;
+}
+
+.form-box.show {
+  margin-bottom: 2rem;
+}
+
+.form-box.show label {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--color-red);
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+.form-box.show > input {
+  border: 2px solid var(--color-red);
+}
+
+.form-box.show > input::placeholder,
+.form-box.show > input {
+  color: var(--color-red);
+}
+
+.input-icon {
+  display: none;
+  position: absolute;
+  top: 1.6rem;
+  right: 3.9rem;
+}
+
+.form-box.show .input-icon {
+  display: block;
+}
+
+.form-paragraph {
+  text-align: center;
+  margin-top: 0.8rem;
+  line-height: 2.6rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-gray-blue);
+}
+.form-paragraph span {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-image: url(./images/bg-intro-mobile.png);
+  }
+
+  .container {
+    align-items: center;
+    width: 100rem;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .container__text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8.8rem 2.4rem 6.4rem 2.4rem;
+  }
+
+  .container__text .main--heading {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .container__form {
+    padding: 0 2.4rem 6.8rem 2.4rem;
+  }
+
+  .btn {
+    text-align: center;
+    padding: 1.8rem 6.7rem;
+    line-height: 2.6rem;
+  }
+
+  .container__form--wrapper {
+    padding: 2.4rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .container__form--wrapper form input {
+    width: 100%;
+    height: 5.6rem;
+    padding-left: 3.2rem;
+  }
+
+  .input-icon {
+    right: 2rem;
+  }
+
+  .form-paragraph {
+    line-height: 2.1rem;
+  }
+}
